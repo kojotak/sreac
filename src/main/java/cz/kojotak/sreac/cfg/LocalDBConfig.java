@@ -11,7 +11,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @Profile("local")
 @Configuration
-public class LocalDatabase {
+public class LocalDBConfig {
 
 	@Bean
     public DataSource dataSource() throws URISyntaxException {

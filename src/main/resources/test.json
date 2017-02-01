@@ -1,0 +1,178 @@
+{
+	"meta_description": "Byt 3+1 97 m\u00b2 k prodeji Bro\u017eovsk\u00e9ho, Slan\u00fd; 2\u00a0970\u00a0000 K\u010d, cihlov\u00e1 stavba, osobn\u00ed vlastnictv\u00ed, po rekonstrukci.",
+	"map": {
+		"lat": 50.2306811383127,
+		"type": "coordinates",
+		"lon": 14.0820693969727,
+		"zoom": 14
+	},
+	"logged_in": true,
+	"_embedded": {
+		"note": {
+			"note": "",
+			"_links": {
+				"self": {
+					"href": "/cs/v2/note/3614822748"
+				}
+			},
+			"has_note": false
+		},
+		"favourite": {
+			"is_favourite": false,
+			"_links": {
+				"self": {
+					"href": "/cs/v2/favourite/3614822748"
+				}
+			}
+		},
+		"calculator": null,
+		"images": {
+			"kind": 0,
+			"_links": {
+				"dynamicDown": {
+					"href": "https://d18-a.sdn.szn.cz/d_18/c_img_G_L/WVpB6rE.jpeg?fl=res,{width},{height},3|shr,,20|jpg,90"
+				},
+				"dynamicUp": {
+					"href": "https://d18-a.sdn.szn.cz/d_18/c_img_G_L/WVpB6rE.jpeg?fl=res,{width},{height},3|wrm,/watermark/sreality.png,10|shr,,20|jpg,90"
+				},
+				"self": {
+					"href": "https://d18-a.sdn.szn.cz/d_18/c_img_G_L/WVpB6rE.jpeg?fl=res,1920,1080,1|wrm,/watermark/sreality.png,10|shr,,20|jpg,90",
+					"title": "Vstupn\u00ed hala"
+				},
+				"dynamic": {
+					"href": "https://img.sreality.cz/dyn/dyn/{SIZE}/"
+				},
+				"gallery": {
+					"href": "https://d18-a.sdn.szn.cz/d_18/c_img_G_L/WVpB6rE.jpeg?fl=res,221,166,3|shr,,20|jpg,90"
+				},
+				"view": {
+					"href": "https://d18-a.sdn.szn.cz/d_18/c_img_G_L/WVpB6rE.jpeg?fl=res,749,562,3|shr,,20|jpg,90"
+				}
+			},
+			"id": 176609751,
+			"order": 2
+		}],
+		"seller": {
+			"in_banner_seller": true,
+			"specialization_string": "",
+			"specialization": {
+				"category": {
+					"category_main_cb": 4,
+					"num": 1
+				}],
+				"type": {
+					"num": 10,
+					"category_type_cb": 1
+				}
+			},
+			"user_id": 67234,
+			"phones": {
+				"code": "420",
+				"type": "MOB",
+				"number": "725293121"
+			}],
+			"image": "https://d18-a.sdn.szn.cz/d_18/c_img_G_L/VDdB6qw.jpeg?fl=res,70,104,3|shr,,20|jpg,90",
+			"_links": {
+				"self": {
+					"profile": "/seller/1/doc",
+					"href": "/cs/v2/seller/67234"
+				}
+			},
+			"active": true,
+			"_embedded": {
+				"premise": {
+					"www": "",
+					"ico": 3729907,
+					"name": "CENTURY 21 Exclusive",
+					"locality": {
+						"lat": 50.2323407100892,
+						"lon": 14.0864971102568
+					},
+					"url": "CENTURY-21-Exclusive-Slany",
+					"phones": {
+						"code": "420",
+						"type": "TEL",
+						"number": "725293121"
+					}],
+					"ask_id": 12932695,
+					"company_id": 8038,
+					"allow_calculator": 1,
+					"logo_small": "https://img.firmy.cz/logo/small/201510/3010/45/56334d14457f260f7d260000",
+					"company_paid_firmy": 0,
+					"_links": {
+						"self": {
+							"profile": "/companies/1/doc",
+							"href": "/cs/v2/companies/13468"
+						}
+					},
+					"www_visible": "",
+					"id": 13468,
+					"logo": "https://img.firmy.cz/logo/big/201510/3010/45/56334d14457f260f7d260000",
+					"company_subject_id": 3882044,
+					"email": "exclusive21@seznam.cz",
+					"address": "Palack\u00e9ho 215/2, 27401 Slan\u00fd",
+					"description": "Provozujeme realitn\u00ed kancel\u00e1\u0159. Zaji\u0161\u0165ujeme komplexn\u00ed realitn\u00ed slu\u017eby a poskytujeme poradenstv\u00ed v oblasti realit."
+				}
+			},
+			"user_name": "Jana Ku\u010derov\u00e1",
+			"email": "jana.kucerova@century21.cz"
+		}
+	},
+	"name": {
+		"name": "N\u00e1zev",
+		"value": "Prodej bytu 3+1\u00a097\u00a0m\u00b2"
+	},
+	"locality": {
+		"name": "Adresa",
+		"value": "Bro\u017eovsk\u00e9ho, Slan\u00fd"
+	},
+	"text": {
+		"name": "Popis",
+		"value": "Dovolujeme si V\u00e1m exklusivn\u011b nab\u00eddnout jedine\u010dn\u00fd byt 3 + 1 o celkov\u00e9 plo\u0161e 97 m2 v sam\u00e9m centru m\u011bsta Slan\u00fd. Byt se nach\u00e1z\u00ed v prvn\u00edm pat\u0159e dvoupatrov\u00e9ho cihlov\u00e9ho domu se zahr\u00e1dkou. V minul\u00e9m roce prob\u00e9hla v byt\u011b nadstandardn\u00ed celkov\u00e1 rekonstrukce a jej\u00edm v\u00fdsledkem je nev\u0161edn\u00ed a osobit\u00fd design bytu s velmi praktickou dispozic\u00ed. K dispozici nov\u00fdm majitel\u016fm je prostorn\u00e1 vstupn\u00ed hala, ob\u00fdvac\u00ed pokoj, kuchy\u0148 s novou kuchy\u0148skou linkou a j\u00eddelnou, lo\u017enice a pokoj pro hosty (d\u011btsk\u00fd pokoj, pracovna). P\u0159i rekonstrukci byla vytvo\u0159ena nadstndardn\u00ed koupelna s vanou a velk\u00fdm sprchov\u00fdm koutem, Byt m\u00e1 vlastn\u00ed plynov\u00fd kotel a t\u00edm p\u00e1dem jsou zaji\u0161t\u011bn\u00e9 n\u00edzk\u00e9 n\u00e1klady na bydlen\u00ed. Velk\u00fdm benefitem t\u00e9to nab\u00eddky je velk\u00fd sklep a zahrada za domem. Poloha bytu v centru m\u011bsta zaji\u0161\u0165uje plnou ob\u010danskou vybavenost v bezprost\u0159edn\u00ed bl\u00edzkosti domu. Autobusov\u00e9 n\u00e1dra\u017e\u00ed je vzd\u00e1leno cca 7 min. ch\u016fze. Pro v\u00edce informac\u00ed o t\u00e9to zaj\u00edmav\u00e9 nab\u00eddce kontaktujte makl\u00e9\u0159ku nemovitosti."
+	},
+	"poi": [],
+	"price_czk": {
+		"unit": "",
+		"name": "Celkov\u00e1 cena",
+		"value": "2\u00a0970\u00a0000",
+		"value_raw": 2970000
+	},
+	"is_topped": false,
+	"_links": {
+		"self": {
+			"profile": "/estates/1/doc",
+			"href": "/cs/v2/estates/3614822748",
+			"title": "Detail inzeratu"
+		},
+		"local_search": {
+			"href": "/cs/v2/estates?category_main_cb=1&region=Slan\u00fd&region_entity_type=osmm&category_type_cb=1",
+			"title": "Prodej byt\u016f Slan\u00fd"
+		},
+		"broader_search": {
+			"href": "/cs/v2/estates?category_main_cb=1&locality_district_id=50&category_type_cb=1",
+			"title": "Prodej byt\u016f Kladno"
+		}
+	},
+	"panorama": 1,
+	"seo": {
+		"category_main_cb": 1,
+		"category_sub_cb": 7,
+		"category_type_cb": 1,
+		"locality": "slany-slany-brozovskeho"
+	},
+	"rus": false,
+	"is_topped_today": false,
+	"items": {
+		"type": "string",
+		"name": "Vybaven\u00ed",
+		"value": "\u010c\u00e1ste\u010dn\u011b"
+	}],
+	"codeItems": {
+		"something_more1": [
+			3120
+		],
+		"ownership": 1,
+		"building_type_search": 2
+	},
+	"locality_district_id": 50
+}
