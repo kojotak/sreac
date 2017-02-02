@@ -3,7 +3,6 @@ package cz.kojotak.sreac.ctrl;
 import java.util.Map;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -23,7 +22,7 @@ public class RestController {
 
 	@Autowired ZipperService zipper;
 	@Autowired SRealityService sreality;
-	Logger logger = LoggerFactory.getLogger(RestController.class);
+	@Autowired Logger logger;
 
 	@RequestMapping(value = "/testzip/{srealityId}", method = RequestMethod.GET)
 	public ResponseEntity<byte[]> inzerat(@PathVariable long srealityId) {
