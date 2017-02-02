@@ -2,6 +2,7 @@ package cz.kojotak.sreac.service;
 
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -69,7 +70,7 @@ public class SRealityService {
 	}
 	
 	public Map<Priloha, byte[]> stahniPrilohy(Inzerat inzerat){
-		Map<Priloha, byte[]> prilohy = new TreeMap<>();
+		Map<Priloha, byte[]> prilohy = new LinkedHashMap<>();
 		if(inzerat!=null && inzerat.obrazky!=null){
 			for(Priloha priloha : inzerat.obrazky){
 				byte[] obrazek = rest.getForObject(priloha.url, byte[].class);
