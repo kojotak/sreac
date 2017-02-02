@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import cz.kojotak.sreac.ctrl.RestController;
+import cz.kojotak.sreac.ctrl.WebController;
 import cz.kojotak.sreac.service.SRealityService;
 import cz.kojotak.sreac.service.ZipperService;
 
@@ -19,7 +19,7 @@ public class ApplicationTest {
 
 	@Autowired SRealityService sreality;
 	@Autowired ZipperService zipper;
-	@Autowired RestController controller;
+	@Autowired WebController controller;
 	
 	long idInzeratu = 3614822748L;
 	

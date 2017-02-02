@@ -18,11 +18,16 @@ import cz.kojotak.sreac.to.Inzerat;
 import cz.kojotak.sreac.to.Priloha;
 
 @Controller
-public class RestController {
+public class WebController {
 
 	@Autowired ZipperService zipper;
 	@Autowired SRealityService sreality;
 	@Autowired Logger logger;
+	
+	@RequestMapping("/")
+	public String home() {
+		return "Hello World!";
+	}
 
 	@RequestMapping(value = "/testzip/{srealityId}", method = RequestMethod.GET)
 	public ResponseEntity<byte[]> inzerat(@PathVariable long srealityId) {
