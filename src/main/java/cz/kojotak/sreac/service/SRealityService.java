@@ -4,6 +4,7 @@ import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class SRealityService {
 	@Autowired ObjectMapper jsonMapper;
 	@Autowired Logger logger;
 	
-	public Inzerat stahni(long sRealityId){
+	public Inzerat stahniInzerat(long sRealityId){
 		ResponseEntity<Map<String, Object>> response = 
 	            rest.exchange(
 	            		apiPath + sRealityId, 
@@ -55,8 +56,7 @@ public class SRealityService {
 				Object image = vof(vof(element, "_links"),"self");
 				String imageName = vof(image, "title");
 				String imageUrl = vof(image, "href");
-				byte[] imageBytes = rest.getForObject(imageUrl, byte[].class);
-				imageUrls.add(new Priloha(imageUrl, imageName, imageBytes));
+				imageUrls.add(new Priloha(imageUrl, imageName));
 			}
 		}
 		String json = null;
@@ -66,6 +66,17 @@ public class SRealityService {
 			e.printStackTrace();
 		}
 		return new Inzerat(sRealityId, nazev, popis, meta, gps, cena, json, imageUrls);
+	}
+	
+	public Map<Priloha, byte[]> stahniPrilohy(Inzerat inzerat){
+		Map<Priloha, byte[]> prilohy = new TreeMap<>();
+		if(inzerat!=null && inzerat.obrazky!=null){
+			for(Priloha priloha : inzerat.obrazky){
+				byte[] obrazek = rest.getForObject(priloha.url, byte[].class);
+				prilohy.put(priloha, obrazek);
+			}
+		}
+		return prilohy;
 	}
 	
 	<T> T vof(Object object, String key){

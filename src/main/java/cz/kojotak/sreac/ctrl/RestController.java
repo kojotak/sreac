@@ -1,5 +1,7 @@
 package cz.kojotak.sreac.ctrl;
 
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import cz.kojotak.sreac.service.SRealityService;
 import cz.kojotak.sreac.service.ZipperService;
 import cz.kojotak.sreac.to.Inzerat;
+import cz.kojotak.sreac.to.Priloha;
 
 @Controller
 public class RestController {
@@ -25,9 +28,11 @@ public class RestController {
 	@RequestMapping(value = "/testzip/{srealityId}", method = RequestMethod.GET)
 	public ResponseEntity<byte[]> inzerat(@PathVariable long srealityId) {
 		logger.info("looking for: "+srealityId);
-		Inzerat inzerat = sreality.stahni(srealityId);
-		logger.info("downloaded: " + inzerat);
-		byte[] data = zipper.zabal(inzerat);
+		Inzerat inzerat = sreality.stahniInzerat(srealityId);
+		logger.info("fetched: " + inzerat);
+		Map<Priloha, byte[]> prilohy = sreality.stahniPrilohy(inzerat);
+		logger.debug("downloaded "+prilohy.size()+" images");
+		byte[] data = zipper.zabal(inzerat, prilohy);
 		logger.info("packed into: "+data.length+" b");
 		HttpHeaders headers = new HttpHeaders();
 		headers.add(HttpHeaders.CONTENT_TYPE, "application/zip");

@@ -3,6 +3,8 @@ package cz.kojotak.sreac.service;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.List;
+import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -19,17 +21,22 @@ public class ZipperService {
 	@Autowired Charset defaultCharset;
 	@Autowired Logger logger;
 	
-	public byte[] zabal(Inzerat inzerat) {
+	public byte[] zabal(Inzerat inzerat, Map<Priloha, byte[]> prilohy) {
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		try(ZipOutputStream zipStream = new ZipOutputStream(out)){
 			zipStream.putNextEntry(new ZipEntry(""+inzerat.id+".json"));
 			zipStream.write(inzerat.json.getBytes(defaultCharset));
 			zipStream.closeEntry();
 			int pocitadlo = 0;
-			for(Priloha obrazek : inzerat.obrazky){
+			for(Map.Entry<Priloha, byte[]> priloha : prilohy.entrySet()){
+				byte[] data = priloha.getValue();
+				if(data==null || data.length ==0){
+					logger.debug("skipping empty "+priloha.getKey());
+					continue;
+				}
 				String nazevObrazku = String.format("obrazek_%02d.jpg", ++pocitadlo);
 				zipStream.putNextEntry(new ZipEntry(nazevObrazku));
-				zipStream.write(obrazek.data);
+				zipStream.write(priloha.getValue());
 				zipStream.closeEntry();
 			}
 			zipStream.close();
