@@ -1,4 +1,4 @@
-package sreac;
+package cz.kojotak.sreac;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import cz.kojotak.sreac.Application;
 import cz.kojotak.sreac.service.SRealityService;
 import cz.kojotak.sreac.service.ZipperService;
 import cz.kojotak.sreac.to.Inzerat;

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
@@ -26,6 +27,7 @@ public class SRealityService {
 	final String apiPath = sPath +"/api/cs/v2/estates/";
 	
 	@Autowired ObjectMapper jsonMapper;
+	@Autowired Logger logger;
 	
 	public Inzerat stahni(long sRealityId){
 		ResponseEntity<Map<String, Object>> response = 

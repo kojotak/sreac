@@ -6,6 +6,7 @@ import java.nio.charset.Charset;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,7 @@ import cz.kojotak.sreac.to.Priloha;
 public class ZipperService {
 
 	@Autowired Charset defaultCharset;
+	@Autowired Logger logger;
 	
 	public byte[] zabal(Inzerat inzerat) {
 		ByteArrayOutputStream out = new ByteArrayOutputStream();

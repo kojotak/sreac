@@ -13,7 +13,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @Profile("heroku")
 @Configuration
-public class HerokuDBConfig {
+public class HerokuConfig {
 	
 	@Value("${spring.datasource.uri}")
 	private String url;
