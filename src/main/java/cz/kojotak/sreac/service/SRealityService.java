@@ -1,6 +1,8 @@
 package cz.kojotak.sreac.service;
 
 import java.awt.geom.Point2D;
+import java.net.URI;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -13,6 +15,7 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -30,6 +33,28 @@ public class SRealityService {
 	
 	@Autowired ObjectMapper jsonMapper;
 	@Autowired Logger logger;
+	
+	public Long idInzeratu(String input){
+		if(StringUtils.isEmpty(input)){
+			return null;
+		}
+		String url = input.trim().toLowerCase();
+		if(!url.startsWith(sPath)){
+			return null;
+		}
+		try{
+			URL u = new URI(url).toURL();
+			String path = u.getPath();
+			int lastSlash = path.lastIndexOf("/");
+			if(lastSlash>0){
+				String id = path.substring(lastSlash+1);
+				return Long.parseLong(id);
+			}
+		}catch(Exception e){
+			return null;
+		}
+		return null;
+	}
 	
 	public Inzerat stahniInzerat(long sRealityId){
 		ResponseEntity<Map<String, Object>> response = 

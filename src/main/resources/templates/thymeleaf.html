@@ -48,8 +48,18 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>Vložte URL inzerátu</h1>
-                <p class="lead" th:text="'Hello, ' + ${name} + '!'">
-                </p>
+                 <form action="#" th:action="@{/}" th:object="${vyhledani}" method="post">
+			    	<p><input type="text" class="form-control" th:field="*{url}" /></p>
+			    </form>
+		    	<div th:errors="${vyhledani}">
+		    		 <p th:each="err : ${#fields.globalErrors()}" th:text="${err}" />
+		    	</div>
+		    	<div th:if="${inzerat} != null">
+				   <h3 th:text="${inzerat.nazev}" />
+				   <p  th:text="${inzerat.cena}"  /><a th:href="@{/zip/__${inzerat.id}__}">stáhnout všechno v zipu</a>
+				   <p  th:text="${inzerat.popis}" />
+				   <img th:each="obrazek : ${inzerat.obrazky}" th:src="${obrazek.url}" />
+				</div>
             </div>
         </div>
     </div>
